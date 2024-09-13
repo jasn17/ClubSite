@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Futura', Arial, Helvetica, sans-serif;
+}
+
+@keyframes expand-outward {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.expandable-hr {
+    transform-origin: center;
+    animation-fill-mode: forwards;
+    width: 50%; /* Adjust based on your layout */
+}
+
+/* Add to your stylesheet or within a <style> tag in the HTML head */
+.img-slide {
+    transform: translateX(100); /* Start from the left */
+    opacity: 0;
+    transition: transform 5s ease-in-out, opacity 1s ease-in-out;
+}
+
+.img-visible {
+    transform: translateX(0); /* End at the normal position */
+    opacity: 1;
+}
+.img-glow {
+    transition: box-shadow 0.3s ease-in-out;
+    box-shadow: 0 0 8px rgba(255, 165, 0, 0.7); /* Customize the color and size as needed */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#rotatingText {
+    animation: fadeIn 1s;
+}
+/* Stack achievements one on top of the other */
+.achievements-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.achievement-item {
+    width: 80%; /* Adjust width to make it fit nicely */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.achievement-item img {
+    max-width: 100px;
+    height: auto;
+}
+
+
+/* .phant-logo {
+    width: 50%;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+} */
+
+/* Adjust CCR logo */
+.ccr-logo-container {
+    padding: 20px;
+    text-align: center;
+    width: 100%; /* Full width for better control */
+    height: 100%; /* Full height to ensure the logo can fill the container */
+    overflow: hidden; /* Hide any overflow */
+}
+
+.ccr-logo {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain; /* Contain the image within the div */
+    padding: 10px; /* Ensure some padding for breathing room */
+}
+.orange-gradient {
+    background: linear-gradient(to right,white 0%, #f97316 10%, #f97316 90%, white 100%);
+}
+/* For the 'we believe in ' rotating text, smooth fade in/out */
+#rotatingText {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
