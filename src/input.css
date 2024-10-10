@@ -98,3 +98,28 @@ body {
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
+.shadow-circle {
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.6);
+    border-radius: 50%; /* This ensures the shadow remains circular */
+  }
+
+  .background-div {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Adjust based on your content's needs */
+    background-image: url('img/phantlogo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; /* Or use 'contain' based on how you want it to fit */
+    background-attachment: fixed; /* Keeps the background static while scrolling */
+    opacity: 0.5; /* Adjust opacity as needed */
+    z-index: 0;
+  }
+  
+  .content {
+    position: relative;
+    z-index: 1; /* Ensures content is above the background */
+  }
+  

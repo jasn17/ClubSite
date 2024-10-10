@@ -78,3 +78,4 @@ document.addEventListener('DOMContentLoaded', function () {
         typewriterObserver.observe(typewriterElement); // Observe the typewriter element
     }
 });
+
