@@ -67,16 +67,6 @@ body {
     height: auto;
 }
 
-
-/* .phant-logo {
-    width: 50%;
-    height: auto;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-} */
-
 /* Adjust CCR logo */
 .ccr-logo-container {
     padding: 20px;
@@ -127,3 +117,4 @@ body {
     z-index: 1; /* Ensures content is above the background */
   }
   
+ 
