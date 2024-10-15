@@ -74,8 +74,19 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     const donateButton = document.getElementById('donateButton');
-    donateButton.onmouseover = () => donateButton.textContent = "Thank You!";
-    donateButton.onmouseout = () => donateButton.textContent = "Donate";
+    const donateText = document.querySelector('.donate-text');
+    const thankYouText = document.querySelector('.thank-you-text');
+
+    donateButton.onmouseover = () => {
+    donateText.style.transform = 'translateY(-100%)'; // Moves the Donate text up
+    thankYouText.style.transform = 'translateY(0)';  // Brings the Thank You text into view
+    };
+
+    donateButton.onmouseout = () => {
+    donateText.style.transform = 'translateY(0)';  // Brings back the Donate text
+    thankYouText.style.transform = 'translateY(100%)';  // Moves the Thank You text down
+    };
+
     donateButton.onclick = () => window.open('https://www.paypal.com/donate/?hosted_button_id=QYTPEETSK7YPN', '_blank');
 });
 

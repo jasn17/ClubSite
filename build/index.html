@@ -134,9 +134,10 @@
 
     <!-- Donate section -->
     <div class="relative flex items-center justify-center z- min-h-[50vh] border border-gray-300 bg-purple-900" style="clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);" id="donate">
-      <button id="donateButton" class="text-white font-semibold text-4xl w-80 h-40 top-bottom-shadow">
-        Donate
-      </button>
+      <button id="donateButton" class="relative overflow-hidden text-white font-semibold text-4xl w-80 h-40 flex items-center justify-center">
+        <span class="donate-text absolute w-full h-full flex items-center justify-center transition-transform duration-500 ease-in-out" style="transform: translateY(0);">Donate</span>
+        <span class="thank-you-text absolute w-full h-full flex items-center justify-center transition-transform duration-500 ease-in-out" style="transform: translateY(100%);">Thank You!</span>
+    </button>
     </div>
 
     <!-- Content section -->
