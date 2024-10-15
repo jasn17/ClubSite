@@ -19,11 +19,14 @@ module.exports = {
           '50%': { opacity: '0' },
         },
       },
-      animation : {
+      animation: {
         'blink-caret': 'blink 1s step-end infinite',
       },
       fontFamily: {
-        'cormorant': ['Cormorant Garamond', 'serif'],
+        'cormorant': ['Cormorant Garamond', 'serif'],  // Custom font family
+      },
+      clipPath: {
+        'angled': 'polygon(0 10%, 100% 0, 100% 90%, 0 100%)',  // Custom clip path
       },
     },
   },
