@@ -39,6 +39,11 @@
               class="text=white font-bold hover:text-orange-500 transition-colors duration-400"
               >Content</a
             >
+            <a
+              href="#donate"
+              class="text=white font-bold hover:text-orange-500 transition-colors duration-400"
+              >Donate</a
+            >
           </nav>
         </div>
       </section>
@@ -118,15 +123,56 @@
           </p>
         </div>
       </div>
-      <div class="relative z-20 min-h-[50vh] border border-gray-300 bg-orange-500" style="clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);">
-        <div class="absolute inset-0 flex flex-col items-center justify-center text-4xl font-bold text-black">
-          <span>We believe in</span>
-          <span id="rotatingText" class="mt-2"></span>
-        </div> 
+
+    <!-- We believe in section  -->
+    <div class="relative z- min-h-[50vh] border border-gray-300 bg-orange-500" style="clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);">
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-4xl font-bold text-black">
+        <span>We believe in</span>
+        <span id="rotatingText" class="mt-2"></span>
+      </div> 
+    </div>
+
+    <!-- Donate section -->
+    <div class="relative flex items-center justify-center z- min-h-[50vh] border border-gray-300 bg-purple-900" style="clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);" id="donate">
+      <button id="donateButton" class="text-white font-semibold text-4xl w-80 h-40 top-bottom-shadow">
+        Donate
+      </button>
+    </div>
+
+    <!-- Content section -->
+    <div class="min-h-[100vh] flex flex-col justify-center items-center text-black bg-transparent" id="content">
+      <div class="flex items-center pb-10">
+        <h2 class="text-4xl mb-8">Content</h2>
       </div>
-      <div class="flex justify-center h-screen text-black">
-        <h2 class="text-4xl">Second Screen Section</h2>
+
+      <div class="w-1/2">
+        <div class="flex my-2 p-4 border border-gray-300 shadow-md transition-transform duration-300 hover:-translate-y-2.5 hover:shadow-xl rounded-md">
+            <a href="https://youtu.be/ANGa50VYOeg?si=-kx9Tkf1kASE6ybz" class="w-1/2" target="_blank">
+                <img src="img/interview.jpg" alt="Story Image 1" class="w-full transition-transform duration-300 group-hover:scale-105 border-2 border-black rounded-md">
+            </a>
+            <h3 class="text-center mt-20 p-2 flex-1 font-semibold text-xl">Clemson College Republicans Defend Their Right to Free Speech in an Interview with Congressman Matt Gaetz</h3>
+        </div>
+        <div class="flex my-2 p-4 border border-gray-300 shadow-md transition-transform duration-300 hover:-translate-y-2.5 hover:shadow-xl rounded-md">
+            <a href="https://www.fitsnews.com/2022/04/12/clemson-college-republicans-criticized-for-rebuke-of-drag-show/" target="_blank" class="w-1/2">
+                <img src="img/drag.jpg" alt="Story Image 2" class=" transition-transform duration-300 hover:scale-105 border-black rounded-md">
+            </a>
+            <h3 class="mt-40 p-2 flex-1 font-semibold text-xl">Clemson College Republicans Condemn Campus Drag Show During Pride Week</h3>
+        </div>
+        <div class="flex my-2 p-4 border border-gray-300 shadow-md transition-transform duration-300 hover:-translate-y-2.5 hover:shadow-xl rounded-md">
+            <a href="https://www.newsnationnow.com/politics/2024-election/college-aged-perspective-nikki-haley/" target="_blank" class="w-1/2">
+                <img src="img/nikki.png" alt="Story Image 3" class="w-full transition-transform duration-300 hover:scale-105 border-black rounded-md">
+            </a>
+            <h3 class="text-center mt-20 p-2 flex-1 font-semibold text-xl">Clemson College Republicans Endorse Trump Over Haley in South Carolina Primary</h3>
+        </div>
+        <div class="flex my-2 p-4 border border-gray-300 shadow-md transition-transform duration-300 hover:-translate-y-2.5 hover:shadow-xl rounded-md">
+            <a href="https://thetigercu.com/14828/news/clemson-removes-menstrual-products-from-mens-bathroom/" target="_blank" class="w-1/2">
+                <img src="img/tampon.jpg" alt="Story Image 4" class="w-full transition-transform duration-300 hover:scale-105 border-black rounded-md">
+            </a>
+            <h3 class="text-center mt-36 p-2 flex-1 font-semibold text-xl">The Clemson College Republicans Prompt University to Remove Menstrual Products from Men’s Restrooms</h3>
+        </div>
       </div>
+    </div>
+
     </div> 
     
 

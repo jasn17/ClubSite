@@ -73,9 +73,9 @@ document.addEventListener('DOMContentLoaded', function () {
         threshold: 0.25 // Trigger when 25% of the element is visible
     });
 
-    const typewriterElement = document.getElementById('typewriter');
-    if (typewriterElement) {
-        typewriterObserver.observe(typewriterElement); // Observe the typewriter element
-    }
+    const donateButton = document.getElementById('donateButton');
+    donateButton.onmouseover = () => donateButton.textContent = "Thank You!";
+    donateButton.onmouseout = () => donateButton.textContent = "Donate";
+    donateButton.onclick = () => window.open('https://www.paypal.com/donate/?hosted_button_id=QYTPEETSK7YPN', '_blank');
 });
 
