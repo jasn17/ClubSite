@@ -1,0 +1,125 @@
+/* Mobile First Approach - Base styles */
+@media (max-width: 640px) {
+    .achievement-item {
+        width: 95%;
+        margin-bottom: 15px;
+    }
+
+    .achievement-item img {
+        max-width: 80px;
+    }
+
+    .ccr-logo-container {
+        padding: 10px;
+    }
+
+    .background-div {
+        background-size: contain;
+        min-height: 50vh;
+    }
+
+    .content {
+        padding: 1rem;
+    }
+
+    .expandable-hr {
+        width: 80%;
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .achievement-item {
+        width: 90%;
+        margin-bottom: 18px;
+    }
+
+    .achievement-item img {
+        max-width: 90px;
+    }
+
+    .ccr-logo-container {
+        padding: 15px;
+    }
+
+    .background-div {
+        background-size: cover;
+        min-height: 75vh;
+    }
+
+    .content {
+        padding: 1.5rem;
+    }
+
+    .expandable-hr {
+        width: 70%;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1025px) {
+    .achievement-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .achievement-item img {
+        max-width: 100px;
+    }
+
+    .ccr-logo-container {
+        padding: 20px;
+    }
+
+    .background-div {
+        background-size: cover;
+        min-height: 100vh;
+    }
+
+    .content {
+        padding: 2rem;
+    }
+
+    .expandable-hr {
+        width: 50%;
+    }
+}
+
+/* Common Responsive Utilities */
+.responsive-text {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+.responsive-padding {
+    padding: clamp(1rem, 3vw, 2rem);
+}
+
+.responsive-margin {
+    margin: clamp(1rem, 3vw, 2rem);
+}
+
+/* Image Responsiveness */
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Flex Container Responsiveness */
+.responsive-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .responsive-flex {
+        flex-direction: row;
+    }
+}
+
+/* Grid Responsiveness */
+.responsive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+} 
