@@ -12,14 +12,23 @@
   </head>
   <body class="min-h-screen bg-white text-black z-0">
     <!-- Loading Screen -->
-    <div class="loading-screen">
-      <div class="loading-container">
-        <img src="img/phantload.png" alt="Loading..." class="loading-logo">
-        <div class="loading-bar"></div>
-      </div>
+    <div class="loadingScreen">
+      <h1>Loading...</h1>
     </div>
 
     <!-- Content Wrapper - Content will be loaded here -->
     <div class="content-wrapper"></div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const loadingScreen = document.querySelector('.loadingScreen');
+        const contentWrapper = document.querySelector('.content-wrapper');
+
+        window.addEventListener('load', () => {
+          loadingScreen.style.display = 'none';
+          contentWrapper.style.display = 'block'; // Show content
+        });
+      });
+    </script>
   </body>
 </html>
