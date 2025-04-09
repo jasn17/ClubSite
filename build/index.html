@@ -66,23 +66,25 @@
           ></video>
 
           <!-- Left Article -->
-          <article class="relative flex flex-col justify-center items-center w-full z-9 text-center p-8">
+          <article
+            class="relative flex flex-col justify-center items-center w-1/2 z-9 text-left p-8"
+          >
             <h2 class="max-w-md text-5xl font-bold text-white">
               We are
               <span class="text-orange-500">unapologetically</span>
               America First
             </h2>
-            <a href="https://clemson.campuslabs.com/engage/organization/clemsoncollegerepublicans"
-               class="bg-purple-950 text-white font-semibold border-double border-4 border-orange-500 text-lg rounded-md px-7 py-2 mt-8 hover:bg-orange-500 transition-colors duration-400">
-              Get Involved
-            </a>
+            <p class="font-bold text-xl sm:text-2xl mt-5 text-white mobile-hide">
+              <span class="inline-block text-orange-500">Clemson's #1</span>
+              conservative club on campus
+            </p>
           </article>
 
           <!-- Right Article -->
           <article
             class="relative flex flex-col justify-center items-center w-1/2 z-9 text-right p-8"
           >
-            <h3 class="max-w-md text-4xl font-bold text-white">
+            <h3 class="max-w-md text-4xl font-bold text-white mobile-hide">
               See what makes us
               <span class="inline-block text-purple-950">different</span>
             </h3>
@@ -283,7 +285,7 @@
 
         iframe {
           width: 100%;
-          height: auto;
+          height: 600px; /* Maintain calendar height */
         }
 
         .donate-text, .thank-you-text {
@@ -301,8 +303,8 @@
           width: 100%;
         }
 
-        /* Hide non-essential elements on mobile */
-        #hero article:nth-child(2) {
+        /* Hide specific elements on mobile */
+        .mobile-hide {
           display: none;
         }
       }
