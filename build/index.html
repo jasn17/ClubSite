@@ -7,7 +7,7 @@
     <title>Clemson College Republicans</title>
     <link href="output.css" rel="stylesheet" />
     <link rel="stylesheet" href="../src/input.css" />
-    <script defer src="../loader.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script defer src="app.js"></script>
   </head>
   <body class="min-h-screen bg-white text-black z-0">
@@ -16,8 +16,183 @@
       <h1>Loading...</h1>
     </div>
 
-    <!-- Content Wrapper - Content will be loaded here -->
-    <div class="content-wrapper"></div>
+    <!-- Main Content -->
+    <div class="content-wrapper" style="display: none;">
+      <!-- Navbar -->
+      <header class="bg-purple-950 text-white sticky top-0 z-10">
+        <section class="min-h-4xl mx-auto p-4 flex justify-between items-center">
+          <h1 class="text-3xl font-semibold font-md">
+            <a href="#hero"> Clemson College Republicans </a>
+          </h1>
+          <div>
+            <button
+              class="text-2xl sm:hidden focus:outline-none"
+              id="mobile-open-button"
+            >
+              &#9776;
+            </button>
+            <nav class="sm:block hidden space-x-8 text-xl" aria-label="main">
+              <a
+                href="#who-we-are"
+                class="text-white font-bold hover:text-orange-500 transition-colors duration-400"
+                >About Us</a
+              >
+              <a
+                href="#donate"
+                class="text=white font-bold hover:text-orange-500 transition-colors duration-400"
+                >Donate</a
+              >
+              <a
+                href="#content"
+                class="text=white font-bold hover:text-orange-500 transition-colors duration-400"
+                >Content</a
+              >
+            </nav>
+          </div>
+        </section>
+      </header>
+
+      <!-- VideoIntro -->
+      <main class="static max-w-auto mx-auto h-screen">
+        <section class="relative w-full h-screen flex" id="hero">
+          <!-- Video Background -->
+          <video
+            src="img/CCR.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+            class="absolute inset-0 w-full h-full object-cover z-1"
+          ></video>
+
+          <!-- Left Article -->
+          <article
+            class="relative flex flex-col justify-center items-center w-1/2 z-9 text-left p-8"
+          >
+            <h2 class="max-w-md text-5xl font-bold text-white">
+              We are
+              <span class="text-orange-500">unapologetically</span>
+              America First
+            </h2>
+            <p class="font-bold text-xl sm:text-2xl mt-5 text-white">
+              <span class="inline-block text-orange-500">Clemson's #1</span>
+              conservative club on campus
+            </p>
+          </article>
+
+          <!-- Right Article -->
+          <article
+            class="relative flex flex-col justify-center items-center w-1/2 z-9 text-right p-8"
+          >
+            <h3 class="max-w-md text-4xl font-bold text-white">
+              See what makes us
+              <span class="inline-block text-purple-950">different</span>
+            </h3>
+            <a
+              href="https://clemson.campuslabs.com/engage/organization/clemsoncollegerepublicans"
+              class="bg-purple-950 text-white font-semibold border-double border-4 border-orange-500 text-lg rounded-md px-7 py-2 mt-8 hover:bg-orange-500 transition-colors duration-400"
+            >
+              Get Involved
+            </a>
+          </article>
+        </section>
+      </main>
+
+      <!-- Middle Section -->
+      <!-- Our Mission Section -->
+      <div class="min-h-[200vh] bg-[url('img/phantop.png')] bg-center bg-fixed bg-[length:500px_px]" id="who-we-are">     
+        <div class="min-h-[50vh]">
+          <div class="flex justify-center h-fit pb-5 text-black pt-20">
+            <h2 class="text-4xl">Who We Are</h2>
+          </div>
+          <div class="flex justify-center text-black px-96">
+            <p class="font-md leading-10 text-lg text-center">
+              We are the Clemson College Republicans—unapologetically conservative,
+              advocating for national and local policy change since our founding. As
+              one of Clemson's oldest clubs, we serve as a launch pad for political
+              internships and connections. Federated under the College Republican
+              National Committee, our chapter is a vibrant community where young
+              conservatives can engage in meaningful action, from volunteering in
+              local campaigns to hosting influential speakers. <br>Join us to be part of
+              a network dedicated to shaping the future of conservative politics.
+            </p>
+          </div>
+        </div>
+
+        <!-- We believe in section  -->
+        <div class="relative z- min-h-[50vh] border border-gray-300 bg-orange-500" style="clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);">
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-4xl font-bold text-black">
+            <span>We believe in</span>
+            <span id="rotatingText" class="mt-2"></span>
+          </div> 
+        </div>
+
+        <!-- Donate section -->
+        <div class="relative flex items-center justify-center z- min-h-[50vh] border border-gray-300 bg-purple-900" style="clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);" id="donate">
+          <button id="donateButton" class="relative overflow-hidden text-white font-semibold text-4xl w-80 h-40 flex items-center justify-center">
+            <span class="donate-text absolute w-full h-full flex items-center justify-center transition-transform duration-500 ease-in-out" style="transform: translateY(0);">Donate</span>
+            <span class="thank-you-text absolute w-full h-full flex items-center justify-center transition-transform duration-500 ease-in-out" style="transform: translateY(100%);">Thank You!</span>
+          </button>
+        </div>
+
+        <!--Calendar section-->
+        <div class="min-h-[70vh]">
+          <div class="flex justify-center mt-8">
+            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&showPrint=0&showTz=0&src=Y29sbHJlcEBnLmNsZW1zb24uZWR1&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23F4511E&color=%2333B679" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+          </div>
+        </div>
+
+        <!-- Content section -->
+        <div class="min-h-[100vh] flex flex-col justify-center items-center text-black bg-transparent" id="content">
+          <div class="flex items-center pb-10">
+            <h2 class="text-4xl mt-14 mb-8">Content</h2>
+          </div>
+
+          <div class="w-1/2">
+            <div class="flex my-2 p-4 border border-gray-300 shadow-md transition-transform duration-300 hover:-translate-y-2.5 hover:shadow-xl rounded-md">
+              <a href="https://youtu.be/ANGa50VYOeg?si=-kx9Tkf1kASE6ybz" class="w-1/2" target="_blank">
+                <img src="img/interview.jpg" alt="Story Image 1" class="w-full transition-transform duration-300 hover:scale-105 border-2 border-black rounded-md">
+              </a>
+              <h3 class="text-center mt-20 p-2 flex-1 font-semibold text-xl">Clemson College Republicans Defend Their Right to Free Speech in an Interview with Congressman Matt Gaetz</h3>
+            </div>
+            <div class="flex my-2 p-4 border border-gray-300 shadow-md transition-transform duration-300 hover:-translate-y-2.5 hover:shadow-xl rounded-md">
+              <a href="https://www.fitsnews.com/2022/04/12/clemson-college-republicans-criticized-for-rebuke-of-drag-show/" target="_blank" class="w-1/2">
+                <img src="img/drag.jpg" alt="Story Image 2" class=" transition-transform duration-300 hover:scale-105 border-2 border-black rounded-md">
+              </a>
+              <h3 class="mt-40 p-2 flex-1 font-semibold text-xl">Clemson College Republicans Condemn Campus Drag Show During Pride Week</h3>
+            </div>
+            <div class="flex my-2 p-4 border border-gray-300 shadow-md transition-transform duration-300 hover:-translate-y-2.5 hover:shadow-xl rounded-md">
+              <a href="https://www.newsnationnow.com/politics/2024-election/college-aged-perspective-nikki-haley/" target="_blank" class="w-1/2">
+                <img src="img/nikki.png" alt="Story Image 3" class="w-full transition-transform duration-300 hover:scale-105 border-2 border-black rounded-md">
+              </a>
+              <h3 class="text-center mt-20 p-2 flex-1 font-semibold text-xl">Clemson College Republicans Endorse Trump Over Haley in South Carolina Primary</h3>
+            </div>
+            <div class="flex my-2 p-4 border border-gray-300 shadow-md transition-transform duration-300 hover:-translate-y-2.5 hover:shadow-xl rounded-md">
+              <a href="https://thetigercu.com/14828/news/clemson-removes-menstrual-products-from-mens-bathroom/" target="_blank" class="w-1/2">
+                <img src="img/tampon.jpg" alt="Story Image 4" class="w-full transition-transform duration-300 hover:scale-105 border-2 border-black rounded-md">
+              </a>
+              <h3 class="text-center mt-36 p-2 flex-1 font-semibold text-xl">The Clemson College Republicans Prompt University to Remove Menstrual Products from Men's Restrooms</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="w-full bg-gray-900 text-white flex items-center justify-between p-4 lg:p-8">
+        <div class="flex space-x-5">
+          <a href="https://x.com/ClemsonCRs" target="_blank">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com/clemsoncollegerep/?hl=en" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://discord.com/invite/nBYWqfNUMQ" target="_blank">
+            <i class="fa-brands fa-discord"></i>
+          </a>
+        </div>
+        <div class="text-sm whitespace-nowrap">Copyright © 2024 Clemson College Republicans</div>
+      </footer>
+    </div>
 
     <script>
       document.addEventListener('DOMContentLoaded', () => {
@@ -30,5 +205,16 @@
         });
       });
     </script>
+
+    <style>
+      footer i {
+        color: white;
+        transition: color 0.3s;
+      }
+
+      footer a:hover i {
+        color: #f97316; /* Change to your desired hover color */
+      }
+    </style>
   </body>
 </html>
