@@ -1,16 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const loadingScreen = document.querySelector('.loading-screen');
-    const loadingFill = document.querySelector('.loading-fill');
+    const loadingBar = document.querySelector('.loading-bar');
     const contentWrapper = document.querySelector('.content-wrapper');
-    let progress = 0;
     
-    // Start fill animation
-    const fillInterval = setInterval(() => {
-        progress += 1;
-        if (progress <= 100) {
-            loadingFill.style.height = `${progress}%`;
-        }
-    }, 20);
+    // Start loading bar animation
+    loadingBar.style.transform = 'scaleX(1)';
 
     // Load the main content
     fetch('build/main-content.html')
@@ -40,10 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Minimum animation time
                 new Promise(resolve => setTimeout(resolve, 2000))
             ]).then(() => {
-                // Ensure fill is complete
-                progress = 100;
-                loadingFill.style.height = '100%';
-                
                 // Wait for fill animation to complete
                 setTimeout(() => {
                     // Fade out loading screen
@@ -55,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Remove loading screen after animation
                     setTimeout(() => {
                         loadingScreen.style.display = 'none';
-                        clearInterval(fillInterval);
                     }, 500);
                 }, 500);
             });
